@@ -70,7 +70,7 @@ console.log(array);
 // Task 7
 // Using the console try to figure out what the thing thats (push, unshift, shift, pop) return to you
 
-// var array2 = [5,9,-7,3.5]
+// var array2 = [5,9,-7,3.5] dddd
 
 var array2 = [];
 array2.unshift(5,9,-7,3.5);
