@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hello{
+            background-color: yellow;
+             text-align: center;
+             width: 300px;
+            font-size: 30px;
+            border: solid black 2px;
+            font-weight: bold;
+        }
+        #change{
+            border: solid black 2px;
+            width: 400px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="hello">Can i help you?</div>
+    <br><br><br>
+    <select id="myselect" onchange="myflag()" >
+        <option value="jordan">Jordan</option>
+        <option value="palestine">Palestine</option>
+    </select><br><br>
+    <img id="image" src="Flag-Jordan.webp" width="200" height="120">
+    <br><br><br>
+    <div id="myform" >
+        <select id="font" onchange="myfoms()">
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Brush Script MT">Brush Script MT</option>
+        </select>
+        <select id="size" onchange="myfoms1()">
+            <option value="10px">10px</option>
+            <option value="20px">20px</option>
+            <option value="30px">30px</option>
+        </select>
+        <form id="deco" onchange="myfoms2()">
+        <input type="checkbox"  name="italic" id="italic">
+        <label for="italic"> Italic</label>
+        <input type="checkbox" name="bold" id="bold">
+        <label for="bold"> Bold</label>
+        <input type="checkbox" name="underline" id="underline">
+        <label for="underline"> Underline</label>
+        </form>
+        <br><br>
+        <div id="change">the Quick brown fox over the lazy dog</div>
+    </div>
+
+      
+<script src="js1.js"> </script>
+</body>
+</html>

@@ -39,7 +39,7 @@ var arr1 = [1, 2, 3, 4, 5, 6, 7, 8]
     for (i = 0;i < arr.length;i++){
         
             even1.push(arr1[i])
-        console.log(even1.join())
+        console.log(even1.join(' '))
     }
  /* 
  Check if a string contains the letter “y”. Print “yes” if it does and “no” if it does not.
