@@ -40,7 +40,9 @@ var arr1 = [1, 2, 3, 4, 5, 6, 7, 8]
         
             even1.push(arr1[i])
         console.log(even1.join(' '))
+        document.write(even1.join(' ') + '<br>')
     }
+    
  /* 
  Check if a string contains the letter “y”. Print “yes” if it does and “no” if it does not.
 let x = "don’t know why"

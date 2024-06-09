@@ -48,10 +48,46 @@ let flag =  document.getElementById("myselect")
         if (document.getElementById("italic").checked){
             document.getElementById("change").style.fontStyle = "italic";
         } 
-        else if (document.getElementById("bold").checked) {
+        else {
+            document.getElementById("change").style.fontStyle = "normal"
+        };
+        if (document.getElementById("bold").checked) {
             document.getElementById("change").style.fontWeight = "bold";
         }
-         else if (document.getElementById("underline").checked) {
+        else {
+            document.getElementById("change").style.fontWeight = "normal";
+        };
+        if (document.getElementById("underline").checked) {
             document.getElementById("change").style.textDecoration = "underline";
         }
+        else {
+            document.getElementById("change").style.textDecoration = "none";
+        };
         }
+    
+    var password1 = document.getElementById('password1')
+    var password2 = document.getElementById('password2')
+    function pass()
+    {
+        if(password1.value.length < 6)
+            {
+                document.getElementById('false').style.visibility = 'visible'
+
+            }else{
+                document.getElementById('false').style.visibility = 'hidden'
+            }
+    }
+    function pass1()
+    {
+        if (password1.value != password2.value)
+            {
+                document.getElementById('false1').style.visibility = 'visible'
+            }else{
+                document.getElementById('false1').style.visibility = 'hidden'
+                document.getElementById('submit').style.visibility = 'visible'
+            }
+    }
+
+    function blue(){
+        document.getElementById('blue').style.backgroundColor = 'red'
+    }

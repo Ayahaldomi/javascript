@@ -281,8 +281,6 @@ Ex: shorterString("air","tr","car","github","by")
 
 */
 function shorterString(str1, str2, str3, str4, str5) {
-    // Check the length of each string
-    // and return the first shorter string
     if (str1.length <= str2.length &&
         str1.length <= str3.length &&
         str1.length <= str4.length &&
@@ -304,17 +302,14 @@ function shorterString(str1, str2, str3, str4, str5) {
                str4.length <= str5.length) {
       return str4;
     } else {
-      return str5; // If all strings have the same length, return the last string
+      return str5;
     }
   }
-  console.log(shorterString("Hello", "Hi", "Hey", "Hola", "Bonjour"));
-  // Output: "Hi"
+  console.log(shorterString("air","school","car","by","github"));
   
-  console.log(shorterString("Apple", "Banana", "Cherry", "Durian", "Elderberry"));
-  // Output: "Apple"
+  console.log(shorterString("by","tr","car","air","github"));
   
-  console.log(shorterString("This", "is", "a", "test", "sentence"));
-  // Output: "a"
+  console.log(shorterString("air","tr","car","github","by"));
 /*
 14
 Write a function called longerString
@@ -329,7 +324,22 @@ Ex: longerString("air","schoo","car","github")
 
 try all the cases (change the order of the longestString)
 */
-
+function longerString(st1, st2, st3, st4){
+    if (st1.length>=st2.length && st1.length>=st3.length && st1.length>= st4.length){
+        return st1
+    }
+    else if (st2.length>=st1.length && st2.length>=st3.length && st2.length>= st4.length){
+        return st2
+    }
+    else if (st3.length>=st1.length && st3.length>=st2.length && st3.length>=st4.length){
+        return st3
+    }
+    else if (st4.length>=st1.length && st4.length>=st2.length && st4.length>=st3.length){
+        return st4
+    }
+}
+console.log(longerString("air","school","car","github"))
+console.log(longerString("air","scoo","car","github"))
 /*
 15
 Write a function called isEven
@@ -523,16 +533,20 @@ console.log(scoreInUniversty(71))
 
 // */
 
-function counter(x){
-    
-    for ( let coun = 0;coun<5;coun++ ){
-      x= coun
-      console.log(x)
-    }
-    
-}
-counter(0)
+function createCounter1() {
+    let count = 0; 
 
+    return function() {
+        return count++; 
+    };
+}
+
+const counter = createCounter1();
+
+console.log(counter()); // 0
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
 
 // /*
 // 24
@@ -565,3 +579,32 @@ counter(0)
 // Ex: counter()
 // => 1
 // //
+function createCounter() {
+    let count = 0; // Initialize count to 0
+
+    function increment() {
+        return count++; // Return the current count and then increment it
+    }
+
+    function resetCounter() {
+        let currentCount = count; // Store the current count
+        count = 0; // Reset the count
+        return { count: currentCount, message: "Counter reset" }; // Return the count before reset and a reset message
+    }
+
+    return {
+        increment: increment,
+        reset: resetCounter
+    };
+}
+const counter1 = createCounter();
+
+        console.log(counter1.increment()); // 0
+        console.log(counter1.increment()); // 1
+        console.log(counter1.increment()); // 2
+
+        const resetResult = counter1 .reset(); 
+        console.log(resetResult); //  { count: 3, message: 'Counter reset' }
+
+        console.log(counter1.increment()); // 0
+        console.log(counter1.increment()); // 1

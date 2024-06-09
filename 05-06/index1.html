@@ -17,6 +17,20 @@
             border: solid black 2px;
             width: 400px;
             height: 150px;
+            padding: 10px;
+          
+        }
+        #false, #false1{
+            visibility: hidden;
+            color: red;
+        }
+        #submit{
+            visibility: hidden;
+        }
+        #blue{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
         }
     </style>
 </head>
@@ -51,8 +65,20 @@
         <br><br>
         <div id="change">the Quick brown fox over the lazy dog</div>
     </div>
+    <br><br><br><br><br>
+    <form id="myformpass" >
+        <label for="password1">Password (min 6 characters): </label>
+        <input type="password" name="password1" id="password1" oninput="pass()">
+        <span id="false">The password is too short</span><br><br>
+        <label for="password2" >Repeat Password:     </label>
+        <input type="password" name="password2" id="password2" oninput="pass1()">
+        <span id="false1">The Two passwords does not match</span><br><br>
+        <input type="button" value="submit" id="submit">
+    </form><br><br>
+    <div id="blue" onclick="blue()"></div>
 
       
-<script src="js1.js"> </script>
+<script src="js1.js">
+</script>
 </body>
 </html>
