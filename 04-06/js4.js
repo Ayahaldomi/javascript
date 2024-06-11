@@ -532,21 +532,19 @@ console.log(scoreInUniversty(71))
 // => 3
 
 // */
-
+let count = 1; 
 function createCounter1() {
-    let count = 0; 
-
-    return function() {
+   
         return count++; 
-    };
+    
 }
 
-const counter = createCounter1();
+ ;
 
-console.log(counter()); // 0
-console.log(counter()); // 1
-console.log(counter()); // 2
-console.log(counter()); // 3
+console.log(createCounter1()); // 0
+console.log(createCounter1()); // 1
+console.log(createCounter1()); // 2
+console.log(createCounter1()); // 3
 
 // /*
 // 24

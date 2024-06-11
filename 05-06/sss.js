@@ -75,21 +75,16 @@ let flag =  document.getElementById("myselect")
 
             }else{
                 document.getElementById('false').style.visibility = 'hidden'
+                
+                if (password1.value != password2.value)
+                    {
+                        document.getElementById('false1').style.visibility = 'visible'
+                        document.getElementById('submit').style.visibility = 'hidden'
+                    }else{
+                        document.getElementById('false1').style.visibility = 'hidden'
+                        document.getElementById('submit').style.visibility = 'visible'  
+                    }
             }
-    }
-    function pass1()
-    {
-        if (password1.value != password2.value)
-            {
-                document.getElementById('false1').style.visibility = 'visible'
-            }else{
-                document.getElementById('false1').style.visibility = 'hidden'
-                document.getElementById('submit').style.visibility = 'visible'
-            }
-    }
-    if (password1.value.length > 6 && password1.value == password2.value)
-        {
-            document.getElementById('submit').style.visibility = 'visible'  
         }
     function blue(){
         document.getElementById('blue').style.backgroundColor = 'red'
